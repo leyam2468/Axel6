@@ -148,6 +148,17 @@ window.onscroll = () => {
 			skill.style.width = skill.dataset.progres;
 		});
 	}
+
+	/* scrol to top */
+
+	let scrolOfset = this.pageYOffset;
+	let scrolToTop = document.querySelector(".scrollToTop");
+	if (scrolOfset > 550) {
+		scrolToTop.style.display = "block";
+	}
+	if (scrolOfset < 550) {
+		scrolToTop.style.display = "none";
+	}
 };
 
 /* gallary area */
@@ -212,6 +223,18 @@ const allLinks = document.querySelectorAll(".links a");
 
 allLinks.forEach((link) => {
 	link.addEventListener("click", (e) => {
+		e.preventDefault();
+		document.querySelector(e.target.dataset.section).scrollIntoView({
+			behavior: "smooth",
+		});
+	});
+});
+
+/* nav link */
+const Scroll = document.querySelectorAll(".scrollToTop");
+
+Scroll.forEach((Scrol) => {
+	Scrol.addEventListener("click", (e) => {
 		e.preventDefault();
 		document.querySelector(e.target.dataset.section).scrollIntoView({
 			behavior: "smooth",

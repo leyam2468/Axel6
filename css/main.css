@@ -250,7 +250,6 @@ body {
 /* start Header */
 .header-area {
 	height: 100vh;
-	width: 100vw;
 	background-image: url(../img/banner1.jpg);
 	background-attachment: fixed;
 	background-size: cover;
@@ -960,4 +959,22 @@ body {
 	color: white;
 	margin: 0;
 	font-weight: bold;
+}
+
+
+
+
+.scrollToTop {
+	background-color: var(--color-one);
+	padding: 11px;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 100;
+	color: white;
+	font-weight: bold;
+	font-size: 25px;
+	border-radius: 5px;
+	display: none;
+	cursor: pointer;
 }
